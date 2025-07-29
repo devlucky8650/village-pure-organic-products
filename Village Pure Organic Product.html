@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Village Pure Organic Products</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    .header {
+      background: #1b3a13;
+      padding: 20px;
+      position: relative;
+      color: white;
+    }
+
+    .header-logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .header-logo img {
+      max-width: 100px;
+      border-radius: 8px;
+      display: block;
+    }
+
+    .header-content {
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 5px 0;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+    }
+
+    .header p {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    .contact {
+      margin-top: 5px;
+      font-size: 1rem;
+    }
+
+.banner {
+  background: url('farm-banner.jpg') center/cover no-repeat;
+  height: 110px; /* smaller height */
+  margin-top: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 4px #000;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 0 0 24px 24px;
+  box-shadow: 0 6px 24px rgba(44, 125, 50, 0.15);
+  border-bottom: 4px solid #2e7d32;
+  margin-bottom: 30px; /* add space below banner */
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px 20px 20px 20px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 -8px 32px rgba(44, 125, 50, 0.10);
+  margin: 0 auto 30px auto;
+  max-width: 1100px;
+  position: relative;
+  z-index: 2;
+}
+
+    .product {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      margin: 15px;
+      width: 280px;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .product:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .product img {
+      max-width: 100%;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .product h2 {
+      margin: 10px 0 5px;
+      font-size: 1.3rem;
+    }
+
+    .price {
+      color: #2e7d32;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .desc {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .order-form input {
+      padding: 4px;
+      margin-top: 6px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .order-form button {
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      margin-top: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .order-form button:hover {
+      background: #256829;
+    }
+
+    .order {
+      text-align: center;
+      padding: 40px 20px;
+      background: #eef;
+    }
+
+    .order a {
+      background: #2e7d32;
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-size: 1rem;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .footer {
+      background: #1b3a13;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      color: #1b3a13;
+    }
+
+    .about, .testimonials {
+      max-width: 800px;
+      margin: auto;
+      padding: 0 20px 40px;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .testimonial-box {
+      background: #fff;
+      padding: 15px;
+      margin: 15px auto;
+      border-radius: 10px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+      max-width: 600px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-logo">
+      <img src="logo.jpg" alt="Village Pure Logo">
+    </div>
+    <div class="header-content">
+      <h1>Village Pure Organic Products</h1>
+      <p>100% Natural · Farm Fresh · Direct from Village Farms</p>
+      <p class="contact">📞 Call / WhatsApp: <a href="https://wa.me/919719711363" style="color:#adebad;">9719711363</a></p>
+    </div>
+  </div>
+
+  <div class="banner">
+    Fresh from Our Village – 100% Organic Goodness 🌿
+  </div>
+
+  <div class="products">
+    <!-- Black Haldi -->
+    <div class="product">
+      <div class="slideshow" onclick="nextImage(this, ['black-haldi-root.jpg', 'black-haldi-root2.jpg'])">
+        <img src="black-haldi-root.jpg" alt="Black Haldi Root">
+      </div>
+      <h2>💟 Black Haldi Root</h2>
+      <p class="price">₹450 / kg</p>
+      <p class="desc">Rare Ayurvedic root for  healing & rituals. 100% organic & chemical‑free.</p>
+      <div class="order-form">
+        <label for="black-haldi-qty">Order (kg):</label>
+        <input type="number" id="black-haldi-qty" min="1" value="1" oninput="updatePrice('black-haldi', 450)">
+        <span id="black-haldi-total">Total: ₹450</span><br>
+        <button onclick="sendOrderWhatsApp('Black Haldi Root', document.getElementById('black-haldi-qty').value)">Confirm Order</button>
+      </div>
+    </div>
+
+    <!-- Yellow Haldi -->
+    <div class="product">
+      <div class="slideshow" onclick="nextImage(this, ['yellow-haldi-root.jpg', 'haldi2.jpg'])">
+        <img src="yellow-haldi-root.jpg" alt="Yellow Haldi Root">
+      </div>
+      <h2>🌿 Yellow Haldi Root</h2>
+      <p class="price">₹140 / kg</p>
+      <p class="desc">Natural turmeric with strong color and health benefits.</p>
+      <div class="order-form">
+        <label for="yellow-haldi-qty">Order (kg):</label>
+        <input type="number" id="yellow-haldi-qty" min="1" value="1" oninput="updatePrice('yellow-haldi', 140)">
+        <span id="yellow-haldi-total">Total: ₹140</span><br>
+        <button onclick="sendOrderWhatsApp('Yellow Haldi Root', document.getElementById('yellow-haldi-qty').value)">Confirm Order</button>
+      </div>
+    </div>
+
+    <!-- Amla -->
+    <div class="product">
+      <div class="slideshow" onclick="nextImage(this, ['Amla.jpg', 'AVLA1.png'])">
+        <img src="Amla.jpg" alt="Amla">
+      </div>
+      <h2>🍈 Amla (Indian Gooseberry)</h2>
+      <p class="price">₹50 / kg</p>
+      <p class="desc">High in Vitamin C, boosts immunity, skin & hair health.</p>
+      <div class="order-form">
+        <label for="amla-qty">Order (kg):</label>
+        <input type="number" id="amla-qty" min="1" value="1" oninput="updatePrice('amla', 50)">
+        <span id="amla-total">Total: ₹50</span><br>
+        <button onclick="sendOrderWhatsApp('Amla (Indian Gooseberry)', document.getElementById('amla-qty').value)">Confirm Order</button>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-title">About Us</h2>
+  <div class="about">
+    <p>Village Pure Organic Products is a small-scale, farmer-run initiative to bring organic, chemical-free produce straight from the village to your home. We grow our haldi and amla with love, care, and tradition.</p>
+  </div>
+
+  <h2 class="section-title">What Our Customers Say</h2>
+  <div class="testimonials">
+    <div class="testimonial-box">
+      “The black haldi is really authentic! I could feel the purity.”<br>– Priya S., Delhi
+    </div>
+    <div class="testimonial-box">
+      “Loved the amla quality. Natural and fresh. Will order again!”<br>– Rohit M., Dehradun
+    </div>
+  </div>
+<h2 class="section-title">Leave a Review</h2>
+<div class="testimonials">
+  <form id="review-form" onsubmit="addReview(event)" style="max-width:600px;margin:auto;text-align:left;">
+    <label for="name">Your Name:</label><br>
+    <input type="text" id="name" required style="width:100%;padding:8px;margin-bottom:10px;"><br>
+
+    <label for="review">Your Review:</label><br>
+    <textarea id="review" rows="4" required style="width:100%;padding:8px;margin-bottom:10px;"></textarea><br>
+
+    <button type="submit" style="background:#2e7d32;color:white;border:none;padding:10px 20px;border-radius:6px;cursor:pointer;">Submit Review</button>
+  </form>
+
+  <div id="user-reviews" style="margin-top:20px;"></div>
+</div>
+
+  <div class="order">
+    <h2>Order Now</h2>
+    <p>Call or WhatsApp your order to <strong>9719711363</strong></p>
+    <a href="https://wa.me/919719711363">WhatsApp us</a>
+  </div>
+
+  <div class="footer">
+    © 2025 Village Pure Organic Products • Serving all across India
+  </div>
+
+  <script>
+    function updatePrice(product, pricePerKg) {
+      var qty = document.getElementById(product + '-qty').value;
+      var total = Math.max(1, parseInt(qty) || 1) * pricePerKg;
+      document.getElementById(product + '-total').textContent = 'Total: ₹' + total;
+    }
+
+    function sendOrderWhatsApp(product, qty) {
+      var phone = "919719711363";
+      var msg = encodeURIComponent("Order for " + qty + " kg of " + product);
+      var url = "https://wa.me/" + phone + "?text=" + msg;
+      window.open(url, "_blank");
+    }
+// ...existing code...
+    function nextImage(container, images) {
+      let img = container.querySelector('img');
+      if (!container.imgIdx) container.imgIdx = 0;
+      container.imgIdx = (container.imgIdx + 1) % images.length;
+      img.src = images[container.imgIdx];
+    }
+
+    // Add this function to enable review posting
+// ...existing code...
+    // ...existing code...
+    // ...existing code...
+    function addReview(event) {
+      event.preventDefault();
+      var name = document.getElementById('name').value.trim();
+      var review = document.getElementById('review').value.trim();
+      if (!name || !review) return;
+      // Find the testimonials section for past reviews
+      var testimonials = document.querySelectorAll('.testimonials')[0];
+      var box = document.createElement('div');
+      box.className = 'testimonial-box';
+      box.innerHTML = `${review}<br>– ${name}`;
+      testimonials.prepend(box); // Add to top
+      event.target.reset();
+    }
+// ...existing code...
+    
+// ...existing code...
+    
+// ...existing code...
+    
+// ...existing code...
+      
+    
+  </script>
+</body>
+</html>  
